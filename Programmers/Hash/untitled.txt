@@ -1,0 +1,32 @@
+#include <string>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+string solution(vector<string> participant, vector<string> completion) {
+    string answer = "";
+    
+    // if where iterator loc is participant.end() 
+    // is who incompletion
+    unsigned int i = 0;
+    while (i < completion.size())
+    {
+        auto it = find(participant.begin(), participant.end(), completion.at(i));
+        // if it loc is end -> non-completion
+        if(it == participant.end())
+        {
+            answer = participant.at(it - participant.begin());
+            break;
+        }
+        // it is not end
+        else
+        {
+            participant.erase(it);
+            i++;
+        }
+        answer = participant.at(0);
+    }
+    
+    return answer;
+}

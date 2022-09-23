@@ -1,0 +1,26 @@
+<input>
+Number of Test Case
+Number of Student, Find Student index -> 이를 통해서 때 마다 상대 평가 계산을 해야 할 것이다.
+
+input * 0.35 + input * 0.45 + input * 0.2
+result is Score
+
+1. Sorting.
+data input -> calc -> data sorting -> dest index finding
+데이터 입력 -> 점수 계산 -> 데이터 정렬 -> 찾고자 하는 학생의 인덱스 색인
+number of student / 10 => score_multiply Define
+
+별도의 [0][N] Matrix를 선언하고, merge sort algorithm을 사용하여, 학생의 점수를 우선 정렬한다.
+이후 학생의 인덱스에 해당하는 데이터를  index = np.where(sorted_score == score[n][4])
+index - 1 / score_multiply is rank index
+0 is A+, ... , 9 is D0
+nlog2n + n
+
+2. Rank Sorting
+데이터 입력 -> Multiply, Score 계산 -> 계산 점수 저장 배열 선언 -> 시험 유형에 따른 점수 계산 -> n번째 학생 점수 저장
+if 입력된 학생들의 점수 저장이 완료되었을 경우:
+	점수 행렬의 [::-1][:N]를 인덱스 정렬 함수에 입력하여, 인덱스의 내림차순 순서를 구한다.
+	이에 국한 될 것이 아니라, 우리는 특정 학생의 점수 순위를 구해야 학점을 구할 수 있으므로, 
+	입력된 학생 번호의 인덱스의 위치를 파악하여, 실질적인 학생의 점수 순위를 구한다.
+	구한 순위와 Multiplyer 값을 나눠, N/10의 학생들 만큼 같은 등급을 받을 수 있다는 조건을 만족한다. i.,e) N is 20, K is 14 => 14 / 2 => result[7]
+	이후, 등급에 맞게 스케일링한 인덱스를 통해 등급을 구하면 끝이다.
