@@ -1,7 +1,7 @@
 # 2022 Coding Test
     
   > 2022-1 메이즈러너 코딩테스트 동아리
-
+## SW Expert Academy
 * [1859. 백만 장자 프로젝트-1](https://github.com/77elon/2022-Coding-Test/blob/main/03-28/np.py)  
 * [1859. 백만 장자 프로젝트-2](https://github.com/77elon/2022-Coding-Test/blob/main/03-28/np2.py)
 
